@@ -1,5 +1,7 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import Header from '../components/Header'
+import { SearchIcon, MicrophoneIcon } from '@heroicons/react/solid'
 
 export default function Home() {
   return (
@@ -13,6 +15,25 @@ export default function Home() {
       <Header />
 
       {/* Body */}
+      <form className='flex flex-col items-center mt-40'>
+        <Image
+          src='https://play-lh.googleusercontent.com/1-hPxafOxdYpYZEOKzNIkSP43HXCNftVJVttoo4ucl7rsMASXW3Xr6GlXURCubE1tA=w3840-h2160-rw'
+          alt='google image'
+          className='object-cover w-52'
+          width='300'
+          height='150'
+          objectFit='cover'
+        />
+        <div className='flex mb-4 border border-gray-500 rounded-md m-3 p-3'>
+          <SearchIcon className='h-5 text-gray-500' />
+          <input type='text' className='flex-grow' />
+          <MicrophoneIcon className='h-5 text-gray-500' />
+        </div>
+        <div className='flex space-x-6'>
+          <button className='bg-gray-100  p-3'>Google Search</button>
+          <button className='bg-gray-100 p-3'>I'm feeling lucky</button>
+        </div>
+      </form>
 
       {/* Footer */}
     </div>
