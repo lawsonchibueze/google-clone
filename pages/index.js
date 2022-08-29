@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Header from '../components/Header'
 import { SearchIcon, MicrophoneIcon } from '@heroicons/react/solid'
+import Footer from '../components/Footer'
 
 export default function Home() {
   return (
@@ -24,18 +25,19 @@ export default function Home() {
           height='150'
           objectFit='cover'
         />
-        <div className='flex mb-4 border border-gray-500 rounded-md m-3 p-3'>
+        <div className='flex w-full mt-5 mx-auto max-w-[90%] border border-gary-200 hover:shadow-lg focus-within:shadow-lg px-5 py-3 rounded-full items-center sm:max-w-xl lg:max-w-2xl'>
           <SearchIcon className='h-5 text-gray-500' />
           <input type='text' className='flex-grow' />
           <MicrophoneIcon className='h-5 text-gray-500' />
         </div>
-        <div className='flex space-x-6'>
+        <div className='flex flex-col sm:flex-row w-[50%] space-y-2 mt-8 sm:space-y-0 sm:space-x-4 justify-center'>
           <button className='bg-gray-100  p-3'>Google Search</button>
           <button className='bg-gray-100 p-3'>I'm feeling lucky</button>
         </div>
       </form>
 
       {/* Footer */}
+      <Footer />
     </div>
   )
 }
